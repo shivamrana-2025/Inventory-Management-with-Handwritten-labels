@@ -40,10 +40,10 @@ if uploaded_file:
 
         # Render a circled check icon next to the Add button (replaces the square ✅ icon)
         col_icon, col_button = st.columns([0.5, 5])
-        with col_icon:
-            st.markdown(circled_check_svg(28), unsafe_allow_html=True)
+        
         with col_button:
-            if st.button("Add to Inventory"):
+            if st.button(with col_icon:
+            st.markdown(circled_check_svg(28), unsafe_allow_html=True)"Add to Inventory"):
                 st.session_state.inventory[item_name] = {"quantity": quantity, "price": price}
                 st.success(f"{item_name} added to inventory!")
 
