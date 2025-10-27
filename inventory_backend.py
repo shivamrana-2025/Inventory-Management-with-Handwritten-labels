@@ -35,8 +35,4 @@ def parse_item_info(ocr_text):
     item_name = item_match.group(1).title() if item_match else None
     quantity = int(qty_match.group(1)) if qty_match else None
     price = float(price_match.group(1)) if price_match else None
-    if quantity is not None:
-        quantity =float(f"{quantity:.2f}")
-    if price is not None:
-        price = float(f"{price:.2f}")
     return item_name, quantity, price
