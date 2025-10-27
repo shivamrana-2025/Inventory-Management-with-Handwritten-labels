@@ -30,7 +30,7 @@ if uploaded_file:
         if not price:
             price = st.number_input("Enter price manually:", min_value=1.0, step=0.5)
 
-        if st.button("✅ Add to Inventory"):
+        if st.button("✅ Add to Inventory" ,style="bold yellow"):
             st.session_state.inventory[item_name] = {"quantity": quantity, "price": price}
             st.success(f"{item_name} added to inventory!")
 
