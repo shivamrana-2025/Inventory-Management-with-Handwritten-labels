@@ -10,7 +10,7 @@ st.markdown("Upload a handwritten label like **'Apple Quantity: 7 Price: 100'** 
 uploaded_file = st.file_uploader("📸 Upload Handwritten Label Image", type=["png", "jpg", "jpeg"])
 
 if uploaded_file:
-    st.image(uploaded_file, caption="Uploaded Label", use_column_width=True)
+    st.image(uploaded_file, caption="Uploaded Label", use_container_width=True)
     with st.spinner("🧠 Recognizing Handwritten Text..."):
         processed_img = preprocess_image(uploaded_file)
         ocr_text = extract_text(processed_img)
